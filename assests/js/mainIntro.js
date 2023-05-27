@@ -1,17 +1,5 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
-
-const main = $(".singleProduct__left__child__header");
-const iconRight = $(".singleProduct__left__child__header--iconRight");
-const iconDown = $(".singleProduct__left__child__header--iconDown");
-const list = $(".singleProduct__left__child__header__list");
-
-main.addEventListener("click", () => {
-    list.classList.toggle("ShowList");
-    iconRight.classList.toggle("HideList");
-    iconDown.classList.toggle("ShowList");
-})
-
 const btnMenuTV = $(".header__footer__child__selec__tv");
 const btnMenuSmartPhone = $(".header__footer__child__selec__smartPhone");
 const btnMenuLaptop = $(".header__footer__child__selec__laptop");
@@ -37,10 +25,6 @@ const mainInput = $(".header__footer__mobile__user__glass__input");
 const iconGlass = $(".header__footer__mobile__user__glass__icon"); 
 const iconExit = $(".header__footer__mobile__user__exit__icon"); 
 
-const inputValue = $(".singleProduct__right__child__right__AvancInfo__quality__input");
-const iconUpQua = $(".singleProduct__right__child__right__AvancInfo__quality__upDown__iconUp");
-const iconDownQua = $(".singleProduct__right__child__right__AvancInfo__quality__upDown__iconDown");
-
 const btnTVHeader = $(".header__footer__child__selec__tv__header");
 const btnPhoneHeader = $(".header__footer__child__selec__smartPhone__header");
 const btnLaptopHeader = $(".header__footer__child__selec__laptop__header");
@@ -49,7 +33,6 @@ const btnCameraHeader = $(".header__footer__child__selec__camera__header");
 const btnMovieHeader = $(".header__footer__child__selec__movie__header");
 
 var withScreen;
-
 // header
 btnMenuTV.addEventListener("click", (e) => {
     if(withScreen < 1230 || window.innerWidth < 1230)
@@ -93,7 +76,6 @@ btnMenuMovie.addEventListener("click", (e) => {
         btnMovieHeader.classList.toggle("paddingClick");
     }
 })
-
 
 btnMenuTVChild.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -148,38 +130,3 @@ btnGlass.addEventListener("click", () => {
     iconExit.classList.toggle("ShowList");
 })
 // header
-
-var count = 0;
-
-iconUpQua.addEventListener("click", () => {
-    count++;
-    inputValue.value = count;
-})
-iconDownQua.addEventListener("click", () => {
-    count--;
-    if(count < 1)
-    {
-        count = 1;
-    }
-    inputValue.value = count;
-})
-
-const containerImg = $(".singleProduct__right__child__left__img");
-const Img = $(".singleProduct__right__child__left__img__child");
-
-
-containerImg.addEventListener("mousemove", (e) => {
-    const x = e.clientX - e.target.offsetLeft;
-    const y = e.clientY - e.target.offsetTop;
-
-    console.log(x, y);
-    
-    Img.style.transformOrigin = `${x}px ${y}px`;
-    Img.style.transform = "scale(2)";
-
-})
-
-containerImg.addEventListener("mouseleave", (e) => {
-    Img.style.transformOrigin = "center";
-    Img.style.transform = "scale(1)";
-})

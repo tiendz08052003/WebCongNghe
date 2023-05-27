@@ -800,20 +800,37 @@
 
 .singleProduct__right {
     margin-bottom: 90px;
+    position: relative;
 }
 
 .singleProduct__right__child {
-    
 }
 
 .singleProduct__right__child__left {
-    
 }
 
 .singleProduct__right__child__left__img {
-    background-repeat: no-repeat;
-    background-position: top center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    overflow: hidden;
 }
+
+.singleProduct__right__child__left__img__child {
+    padding-top: 100%;  
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.singleProduct__right__child__left__img__icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.singleProduct__right__child__left__img__icon__child {
+    font-size: 2.6rem;
+    color: #fed700;
+}
+
 
 .singleProduct__right__child__right {
     
@@ -1199,4 +1216,12 @@ margin-right: 10px;
 }
 .details__infoStu__info--content {
 
+}
+
+.details__infoStu__seemore {
+    display: flex;
+    justify-content: center;
+    color: blue;
+    margin-top: 20px;
+    font-weight: 500;
 }
