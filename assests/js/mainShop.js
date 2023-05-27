@@ -68,12 +68,15 @@ var styleScreen;
 var activeNextBack
 
 btnNext.addEventListener("click", () => {
+    console.log(listProduct.length);
     if(styleScreen == "phone"  || window.innerWidth < 798)
     {
         activeNextBack =  listProduct.length - 3;
         sum -= 33.33334;
-        if(sum / -33.33334 == activeNextBack + 1)
+        console.log(sum / -33.33334);
+        if(Math.round(sum / -33.33334) == activeNextBack + 1)
         {
+            console.log(2);
             sum = sum += 33.33334;
         }
         if(sum / -33.33334 != 0 && sum / -33.33334 <= activeNextBack / 2)
@@ -187,7 +190,7 @@ btnBack.addEventListener("click", () => {
             cicrleThird.style.backgroundColor = "#ddd";
             cicrleThird.style.borderRadius = "50%";
         }
-        else if(sum / -25 == 0){
+        else if(sum / -33.3334 == 0){
             cicrleFirst.style.flex = "2";
             cicrleFirst.style.backgroundColor = "#fed700";
             cicrleFirst.style.borderRadius = "2.2rem";
@@ -249,7 +252,7 @@ btnBack.addEventListener("click", () => {
             cicrleThird.style.backgroundColor = "#ddd";
             cicrleThird.style.borderRadius = "50%";
         }
-        else if(sum / -25 == 0){
+        else if(sum / -20 == 0){
             cicrleFirst.style.flex = "2";
             cicrleFirst.style.backgroundColor = "#fed700";
             cicrleFirst.style.borderRadius = "2.2rem";

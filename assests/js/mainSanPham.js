@@ -170,10 +170,7 @@ const Img = $(".singleProduct__right__child__left__img__child");
 
 containerImg.addEventListener("mousemove", (e) => {
     const x = e.clientX - e.target.offsetLeft;
-    const y = e.clientY - e.target.offsetTop;
-
-    console.log(x, y);
-    
+    const y = e.clientY - e.target.offsetTop;    
     Img.style.transformOrigin = `${x}px ${y}px`;
     Img.style.transform = "scale(2)";
 

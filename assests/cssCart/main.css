@@ -849,11 +849,13 @@ table.cart__table thead th {
 }
 
 .cart__tableRow3__column1__child__left__input {
+    display: flex;
     flex: 1;
     text-align: end; 
 }
 
 .cart__tableRow3__column1__child__left__input__child {
+    flex: 1;
     padding: 12px 32px;
     font-size: 1.6rem;
     border-top-left-radius: 2.2rem;
